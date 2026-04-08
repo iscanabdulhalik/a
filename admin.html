@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yönetim Paneli - QR Menü</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <!-- Login Container -->
+    <div id="login-section" class="admin-container">
+        <h2>Yönetici Girişi</h2>
+        <div class="form-group">
+            <label>Kullanıcı Adı</label>
+            <input type="text" id="username" placeholder="admin">
+        </div>
+        <div class="form-group">
+            <label>Şifre</label>
+            <input type="password" id="password" placeholder="admin123">
+        </div>
+        <button id="login-btn" class="btn btn-primary">Giriş Yap</button>
+        <p id="login-error" class="error-msg" style="display:none;">Hatalı bilgi girdiniz.</p>
+        <div style="margin-top:20px; font-size:0.85rem; color:#666;">
+            <p>Varsayılan giriş bilgileri:</p>
+            <p><strong>Kullanıcı Adı:</strong> admin | <strong>Şifre:</strong> admin123</p>
+        </div>
+    </div>
+
+    <!-- Admin Panel Container -->
+    <div id="admin-panel" class="admin-container" style="display:none; max-width: 900px;">
+        <header class="admin-header">
+            <h2>Menü Yönetimi</h2>
+            <div>
+                <a href="index.html" class="btn btn-secondary">Menüyü Görüntüle</a>
+                <button id="export-btn" class="btn btn-success">Değişiklikleri İndir (data.js)</button>
+                <button id="logout-btn" class="btn btn-danger">Çıkış</button>
+            </div>
+        </header>
+
+        <div class="info-alert">
+            <strong>Bilgi:</strong> Yaptığınız değişiklikler tarayıcıya (localStorage) kaydedilir. Müşterilerin görmesi için GitHub'a yüklemek üzere <strong>"Değişiklikleri İndir"</strong> butonuna basıp inen <code>data.js</code> dosyasını proje klasörünüze kopyalayıp push ediniz.
+        </div>
+
+        <section class="settings-section">
+            <h3>Genel Ayarlar</h3>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Restoran Adı</label>
+                    <input type="text" id="setting-name">
+                </div>
+                <div class="form-group">
+                    <label>Alt Bilgi (Footer)</label>
+                    <input type="text" id="setting-footer">
+                </div>
+            </div>
+        </section>
+
+        <section class="categories-section">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+                <h3>Kategoriler ve Ürünler</h3>
+                <button id="add-category-btn" class="btn btn-primary">+ Yeni Kategori Ekle</button>
+            </div>
+            <div id="categories-container"></div>
+        </section>
+
+    </div>
+
+    <script src="data.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

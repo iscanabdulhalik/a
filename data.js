@@ -315,7 +315,7 @@ const initialData = {
         }
     ],
     "settings": {
-        "restaurantName": "SHORELINE",
+        "restaurantName": "CALYPSO",
         "footerText": "Kıyı esintisiyle hazırlanan lezzetler. Her gün taze ve günlük."
     }
 };

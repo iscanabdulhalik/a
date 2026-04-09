@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Render Admin Interface
     function renderAdmin() {
         if (!currentData) currentData = {};
-        if (!currentData.settings) currentData.settings = { restaurantName: 'SHORELINE', footerText: '' };
+        if (!currentData.settings) currentData.settings = { restaurantName: 'CALYPSO', footerText: '' };
         if (!currentData.categories) currentData.categories = [];
 
         // Settings

@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yönetim Paneli - QR Menü</title>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>SHORELINE - Yönetim Paneli</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="admin.css">
 </head>
 <body>
 
     <!-- Login Container -->
     <div id="login-section" class="admin-container">
-        <h2>Yönetici Girişi</h2>
+        <h2 class="shoreline-title">SHORELINE</h2>
+        <p style="text-align:center; color:var(--text-secondary); letter-spacing:0.15rem; margin-bottom: 2rem;">YÖNETİM PANELİ</p>
         <div class="form-group">
             <label>Kullanıcı Adı</label>
             <input type="text" id="username" placeholder="admin">
@@ -22,7 +25,7 @@
         </div>
         <button id="login-btn" class="btn btn-primary">Giriş Yap</button>
         <p id="login-error" class="error-msg" style="display:none;">Hatalı bilgi girdiniz.</p>
-        <div style="margin-top:20px; font-size:0.85rem; color:#666;">
+        <div style="margin-top:30px; font-size:0.85rem; color:var(--text-secondary); text-align: center; opacity: 0.6;">
             <p>Varsayılan giriş bilgileri:</p>
             <p><strong>Kullanıcı Adı:</strong> admin | <strong>Şifre:</strong> admin123</p>
         </div>
@@ -31,16 +34,19 @@
     <!-- Admin Panel Container -->
     <div id="admin-panel" class="admin-container" style="display:none; max-width: 900px;">
         <header class="admin-header">
-            <h2>Menü Yönetimi</h2>
-            <div>
+            <div class="header-titles">
+                <h2 class="shoreline-title" style="font-size:2rem; letter-spacing: 0.1rem; margin-bottom: 0;">SHORELINE</h2>
+                <div style="font-size: 0.8rem; letter-spacing: 0.2rem; color: var(--accent-color);">MENÜ YÖNETİMİ</div>
+            </div>
+            <div class="header-actions">
                 <a href="index.html" class="btn btn-secondary">Menüyü Görüntüle</a>
-                <button id="export-btn" class="btn btn-success">Değişiklikleri İndir (data.js)</button>
+                <button id="export-btn" class="btn btn-success">Değişiklikleri İndir</button>
                 <button id="logout-btn" class="btn btn-danger">Çıkış</button>
             </div>
         </header>
 
         <div class="info-alert">
-            <strong>Bilgi:</strong> Yaptığınız değişiklikler tarayıcıya (localStorage) kaydedilir. Müşterilerin görmesi için GitHub'a yüklemek üzere <strong>"Değişiklikleri İndir"</strong> butonuna basıp inen <code>data.js</code> dosyasını proje klasörünüze kopyalayıp push ediniz.
+            <strong>Bilgi:</strong> Yaptığınız değişiklikler tarayıcınıza kaydedilir. Müşterilerin görmesi için <strong>"Değişiklikleri İndir"</strong> butonuna basıp inen <code>data.js</code> dosyasını ana klasöre atıp GitHub'a yüklemelisiniz.
         </div>
 
         <section class="settings-section">
@@ -58,7 +64,7 @@
         </section>
 
         <section class="categories-section">
-            <div style="display:flex; justify-content:space-between; align-items:center;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 20px;">
                 <h3>Kategoriler ve Ürünler</h3>
                 <button id="add-category-btn" class="btn btn-primary">+ Yeni Kategori Ekle</button>
             </div>

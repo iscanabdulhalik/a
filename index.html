@@ -3,21 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QR Menü</title>
+    <title>Shoreline Menu</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+    <!-- Splash Screen -->
+    <div id="splash-screen" class="splash-screen">
+        <div class="splash-content">
+            <h1 class="splash-logo">SHORELINE</h1>
+            <div class="splash-subtitle">COFFEE & FOOD</div>
+            <div class="loader"></div>
+        </div>
+    </div>
+
     <!-- Header Section -->
     <header class="header">
-        <div class="logo-container">
-            <h1 class="logo" id="restaurant-name">MODA KAFE</h1>
-            <div class="logo-subtitle">MENU</div>
+        <div class="header-bg"></div>
+        <div class="logo-container reveal">
+            <h1 class="logo" id="restaurant-name">SHORELINE</h1>
+            <div class="logo-subtitle">M E N U</div>
         </div>
     </header>
+
+    <!-- Sticky Navigation Bar -->
+    <nav class="category-nav" id="category-nav">
+        <!-- populated via js -->
+    </nav>
 
     <!-- Menu Container -->
     <main class="menu-container" id="menu-container">
@@ -25,8 +40,11 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer reveal">
         <p id="footer-text">AFİYET OLSUN</p>
+        <div class="admin-link">
+            <a href="admin.html">Yönetim Paneli</a>
+        </div>
     </footer>
 
     <!-- Scripts -->

@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const logoutBtn = document.getElementById('logout-btn');
     const errorMsg = document.getElementById('login-error');
 
+    let currentData = null;
+
     if (sessionStorage.getItem('isLoggedIn') === 'true') {
         showPanel();
     }
@@ -28,8 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('username').value = '';
         document.getElementById('password').value = '';
     });
-
-    let currentData = null;
 
     function showPanel() {
         loginSection.style.display = 'none';

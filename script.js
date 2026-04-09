@@ -126,21 +126,7 @@ function renderCategoryDetail(data, category) {
 
         itemDiv.appendChild(itemContent);
 
-        if (item.image) {
-            const imgContainer = document.createElement('div');
-            imgContainer.className = 'image-container';
 
-            const itemImg = document.createElement('img');
-            itemImg.className = 'item-image';
-            itemImg.src = item.image;
-            itemImg.alt = item.name;
-            itemImg.loading = "lazy";
-            
-            itemImg.onerror = function() { imgContainer.style.display = 'none'; };
-            
-            imgContainer.appendChild(itemImg);
-            itemDiv.appendChild(imgContainer);
-        }
 
         wrapper.appendChild(itemDiv);
         menuContainer.appendChild(wrapper);

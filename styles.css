@@ -372,29 +372,4 @@ body.loaded .splash-screen {
     .category-title {
         font-size: 2rem;
     }
-    
-    .menu-item {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1.25rem;
-    }
-    
-    .item-header {
-        flex-wrap: wrap;
-    }
-    
-    .item-line {
-        display: none;
-    }
-    
-    .item-price {
-        margin-top: 0.3rem;
-        width: 100%;
-    }
-    
-    .image-container {
-        width: 100%;
-        height: 180px;
-        margin-top: 1rem;
-    }
 }

@@ -320,13 +320,19 @@ const initialData = {
     }
 };
 
+const DATA_VERSION = "2";
+
 // Fonksiyon: Veriyi LocalStorage'dan al veya initialData'yı kullan
 function getMenuData() {
+    const savedVersion = localStorage.getItem("menuDataVersion");
+    if (savedVersion !== DATA_VERSION) {
+        // Versiyon uyuşmuyor, eski cache'i temizle ve yeni veriyi kullan
+        localStorage.removeItem("menuData");
+        localStorage.setItem("menuDataVersion", DATA_VERSION);
+        return initialData;
+    }
     const savedData = localStorage.getItem("menuData");
     if (savedData) {
-        // We do not want to block the user if they had old cached data without the new expanded items.
-        // But for admin compatibility it's safe to load.
-        // Currently skipping simple merger, relying directly on logic.
         return JSON.parse(savedData);
     }
     return initialData;
@@ -335,4 +341,5 @@ function getMenuData() {
 // Fonksiyon: Veriyi LocalStorage'a kaydet (Admin paneli için)
 function saveMenuData(data) {
     localStorage.setItem("menuData", JSON.stringify(data));
+    localStorage.setItem("menuDataVersion", DATA_VERSION);
 }

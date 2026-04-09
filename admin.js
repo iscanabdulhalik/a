@@ -172,8 +172,16 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('export-btn').addEventListener('click', () => {
         const jsContent = `const initialData = ${JSON.stringify(currentData, null, 4)};
 
+const DATA_VERSION = "${Date.now()}";
+
 // Fonksiyon: Veriyi LocalStorage'dan al veya initialData'yı kullan
 function getMenuData() {
+    const savedVersion = localStorage.getItem("menuDataVersion");
+    if (savedVersion !== DATA_VERSION) {
+        localStorage.removeItem("menuData");
+        localStorage.setItem("menuDataVersion", DATA_VERSION);
+        return initialData;
+    }
     const savedData = localStorage.getItem("menuData");
     if (savedData) {
         return JSON.parse(savedData);
@@ -184,6 +192,7 @@ function getMenuData() {
 // Fonksiyon: Veriyi LocalStorage'a kaydet (Admin paneli için)
 function saveMenuData(data) {
     localStorage.setItem("menuData", JSON.stringify(data));
+    localStorage.setItem("menuDataVersion", DATA_VERSION);
 }`;
         
         const blob = new Blob([jsContent], { type: 'text/javascript' });

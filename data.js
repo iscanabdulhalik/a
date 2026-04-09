@@ -320,7 +320,7 @@ const initialData = {
     }
 };
 
-const DATA_VERSION = "2";
+const DATA_VERSION = "3";
 
 // Fonksiyon: Veriyi LocalStorage'dan al veya initialData'yı kullan
 function getMenuData() {

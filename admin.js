@@ -40,6 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Render Admin Interface
     function renderAdmin() {
+        if (!currentData) currentData = {};
+        if (!currentData.settings) currentData.settings = { restaurantName: 'SHORELINE', footerText: '' };
+        if (!currentData.categories) currentData.categories = [];
+
         // Settings
         const settingName = document.getElementById('setting-name');
         const settingFooter = document.getElementById('setting-footer');
@@ -50,8 +54,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const newFooter = settingFooter.cloneNode(true);
         settingFooter.parentNode.replaceChild(newFooter, settingFooter);
 
-        newName.value = currentData.settings.restaurantName;
-        newFooter.value = currentData.settings.footerText;
+        newName.value = currentData.settings.restaurantName || '';
+        newFooter.value = currentData.settings.footerText || '';
 
         newName.addEventListener('input', (e) => { currentData.settings.restaurantName = e.target.value; autoSave(); });
         newFooter.addEventListener('input', (e) => { currentData.settings.footerText = e.target.value; autoSave(); });
@@ -65,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
             catDiv.className = 'category-card';
             catDiv.innerHTML = `
                 <div class="category-header">
-                    <input type="text" value="${cat.name}" data-index="${catIndex}" class="cat-name-input" placeholder="Kategori Adı">
+                    <input type="text" value="${cat.name || ''}" data-index="${catIndex}" class="cat-name-input" placeholder="Kategori Adı">
                     <button class="btn btn-danger btn-sm del-cat-btn" data-index="${catIndex}">Kategoriyi Sil</button>
                 </div>
                 <div class="items-list" id="items-${catIndex}"></div>
@@ -75,12 +79,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Render Items
             const itemsList = document.getElementById(`items-${catIndex}`);
+            if (!cat.items) cat.items = [];
             cat.items.forEach((item, itemIndex) => {
                 const itemDiv = document.createElement('div');
                 itemDiv.className = 'item-row';
                 itemDiv.innerHTML = `
-                    <input type="text" class="w-name item-input" data-cat="${catIndex}" data-item="${itemIndex}" data-field="name" value="${item.name}" placeholder="Ürün Adı">
-                    <input type="text" class="w-price item-input" data-cat="${catIndex}" data-item="${itemIndex}" data-field="price" value="${item.price}" placeholder="Fiyat (örn: 120.00 ₺)">
+                    <input type="text" class="w-name item-input" data-cat="${catIndex}" data-item="${itemIndex}" data-field="name" value="${item.name || ''}" placeholder="Ürün Adı">
+                    <input type="text" class="w-price item-input" data-cat="${catIndex}" data-item="${itemIndex}" data-field="price" value="${item.price || ''}" placeholder="Fiyat (örn: 120.00 ₺)">
                     <input type="text" class="w-img item-input" data-cat="${catIndex}" data-item="${itemIndex}" data-field="image" value="${item.image || ''}" placeholder="Görsel Adı (opsiyonel)">
                     <div class="item-actions">
                         <button class="btn btn-danger btn-sm del-item-btn" data-cat="${catIndex}" data-item="${itemIndex}">Sil</button>

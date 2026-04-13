@@ -22,7 +22,7 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-.shoreline-title {
+.calypso-title {
     font-family: var(--font-heading);
     color: var(--text-primary);
     text-align: center;

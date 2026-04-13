@@ -455,7 +455,7 @@ const initialData = {
                     "name": "Fanta / Gazoz / Coca Cola / Coca Cola Zero",
                     "description": "Buz gibi servis edilen serin kutu içecekler.",
                     "price": "100.00 ₺",
-                    "image": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=400&q=80"
+                    "image": "https://images.unsplash.com/photo-1624552184280-9e9631bbeee9?auto=format&fit=crop&w=600&q=80"
                 },
                 {
                     "id": "ms2",
@@ -501,7 +501,7 @@ const initialData = {
     }
 };
 
-const DATA_VERSION = "10";
+const DATA_VERSION = "17";
 
 // Fonksiyon: Veriyi LocalStorage'dan al veya initialData'yı kullan
 function getMenuData() {

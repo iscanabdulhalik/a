@@ -527,6 +527,89 @@ const initialData = {
                     "image": "https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=400&q=80"
                 }
             ]
+        },
+        {
+            "id": "kokteyller",
+            "name": "Kokteyller",
+            "items": [
+                {
+                    "id": "kt1",
+                    "name": "Hibiscus",
+                    "description": "Kendine has rengi ve mayhoş tadıyla ferahlatıcı hibiskus.",
+                    "price": "220.00 ₺",
+                    "image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=400&q=80"
+                },
+                {
+                    "id": "kt2",
+                    "name": "Şirinler",
+                    "description": "Mavi curacao ve meyve karışımlı eğlenceli tat.",
+                    "price": "220.00 ₺",
+                    "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=400&q=80"
+                },
+                {
+                    "id": "kt3",
+                    "name": "Deep Blue Ocean",
+                    "description": "Okyanus derinliği gibi serin ve egzotik bir karışım.",
+                    "price": "220.00 ₺",
+                    "image": "https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?auto=format&fit=crop&w=400&q=80"
+                },
+                {
+                    "id": "kt4",
+                    "name": "Strawberry & Mango Sunrise",
+                    "description": "Çilek ve mangonun güneş doğuşu gibi eşsiz uyumu.",
+                    "price": "220.00 ₺",
+                    "image": "https://images.unsplash.com/photo-1546173159-315724a31696?auto=format&fit=crop&w=400&q=80"
+                },
+                {
+                    "id": "kt5",
+                    "name": "Cool Lime",
+                    "description": "Taze nane ve misket limonu ile gelen maksimum ferahlık.",
+                    "price": "220.00 ₺",
+                    "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=400&q=80"
+                },
+                {
+                    "id": "kt6",
+                    "name": "Mojito",
+                    "description": "Nane, lime ve sodanın klasik serinleten birleşimi.",
+                    "price": "220.00 ₺",
+                    "image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=400&q=80"
+                },
+                {
+                    "id": "kt7",
+                    "name": "Energy Bomb",
+                    "description": "Enerji veren meyveler ve vitamin dolu bir karışım.",
+                    "price": "220.00 ₺",
+                    "image": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=400&q=80"
+                },
+                {
+                    "id": "kt8",
+                    "name": "Strawberry Paradise",
+                    "description": "Çilek sevenler için adeta bir cennet bahçesi.",
+                    "price": "220.00 ₺",
+                    "image": "https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=400&q=80"
+                },
+                {
+                    "id": "kt9",
+                    "name": "Strawberry Mojito",
+                    "description": "Klasik mojito keyfinin taze çileklerle buluşması.",
+                    "price": "220.00 ₺",
+                    "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=400&q=80"
+                },
+                {
+                    "id": "kt10",
+                    "name": "İtalyan Soda",
+                    "description": "Meyve şurupları ve sodanın şık İtalyan yorumu.",
+                    "price": "220.00 ₺",
+                    "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=400&q=80"
+                },
+                {
+                    "id": "kt11",
+                    "name": "Green Ice",
+                    "description": "Yeşil elma ve buz gibi ferah bir deneyim.",
+                    "price": "220.00 ₺",
+                    "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=400&q=80"
+                }
+            ]
         }
     ],
     "settings": {
@@ -535,7 +618,7 @@ const initialData = {
     }
 };
 
-const DATA_VERSION = "19";
+const DATA_VERSION = "20";
 
 // Fonksiyon: Veriyi LocalStorage'dan al veya initialData'yı kullan
 function getMenuData() {

@@ -214,7 +214,7 @@ const initialData = {
                     "id": "sk6",
                     "name": "Flat White",
                     "description": "İnce süt köpüğü ile kahve tadını ön plana çıkaran lezzet.",
-                    "price": "160.00 ₺",
+                    "price": "170.00 ₺",
                     "image": "https://images.unsplash.com/photo-1582214695420-562a05fc8234?auto=format&fit=crop&w=400&q=80"
                 },
                 {
@@ -493,6 +493,40 @@ const initialData = {
                     "image": "https://images.unsplash.com/photo-1559839913-1140226315ee?auto=format&fit=crop&w=400&q=80"
                 }
             ]
+        },
+        {
+            "id": "tatlilar",
+            "name": "Tatlılar",
+            "items": [
+                {
+                    "id": "tt1",
+                    "name": "Waffle",
+                    "description": "Taze meyveler, eritilmiş çikolata ve fındık ile servis edilen çıtır waffle.",
+                    "price": "280.00 ₺",
+                    "image": "waffle.png"
+                },
+                {
+                    "id": "tt2",
+                    "name": "Dondurma",
+                    "description": "Ferahlatıcı, doğal sütlü dondurma keyfi.",
+                    "price": "40.00 ₺",
+                    "image": "https://images.unsplash.com/photo-1501443762994-82bd5dace89a?auto=format&fit=crop&w=400&q=80"
+                },
+                {
+                    "id": "tt3",
+                    "name": "Cup Tatlılar",
+                    "description": "Farklı aromalarla hazırlanan, pratik ve lezzetli kupa tatlıları.",
+                    "price": "200.00 ₺",
+                    "image": "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=400&q=80"
+                },
+                {
+                    "id": "tt4",
+                    "name": "Dilim Pastalar",
+                    "description": "Günlük taze hazırlanan, enfes kremalı ve meyveli pasta çeşitleri.",
+                    "price": "220.00 ₺",
+                    "image": "https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=400&q=80"
+                }
+            ]
         }
     ],
     "settings": {
@@ -501,7 +535,7 @@ const initialData = {
     }
 };
 
-const DATA_VERSION = "17";
+const DATA_VERSION = "19";
 
 // Fonksiyon: Veriyi LocalStorage'dan al veya initialData'yı kullan
 function getMenuData() {
